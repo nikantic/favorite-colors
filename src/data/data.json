@@ -1,0 +1,24 @@
+{
+	"colors": [
+		{
+			"person": "Nick",
+			"color": "Red"
+		},
+		{
+			"person": "Jacob",
+			"color": "Green"
+		},
+		{
+			"person": "Peter",
+			"color": "Blue"
+		},
+		{
+			"person": "Anne",
+			"color": "Purple"
+		},
+		{
+			"person": "Jasmine",
+			"color": "Yellow"
+		}
+	]
+}
