@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { add } from "../store/slice/personSlice";
 import { IColorItem } from "../types/types";
+import { Button, Input } from "../styled/styled";
 
 const AddNew = () => {
 	const [person, setPerson] = useState({ person: "", color: "" });
@@ -20,25 +21,27 @@ const AddNew = () => {
 		<div>
 			<h1>Add new Person</h1>
 			<p>Name:</p>
-			<input
+			<Input
 				value={person.person}
 				onChange={(input) =>
 					setPerson({ ...person, person: input.target.value })
 				}
 			/>
 			<p>Favorite Color:</p>
-			<input
+			<Input
 				value={person.color}
 				onChange={(input) =>
 					setPerson({ ...person, color: input.target.value })
 				}
 			/>
 			<div>
-				<button onClick={() => person.person && addNewPerson(person)}>
+				<Button onClick={() => person.person && addNewPerson(person)}>
 					Save new person
-				</button>
+				</Button>
 			</div>
-			<Link to="/">Back</Link>
+			<Button>
+				<Link to="/">Back</Link>
+			</Button>
 		</div>
 	);
 };

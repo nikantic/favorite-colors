@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import { IColorItem } from "../types/types";
 import { remove, update } from "../store/slice/personSlice";
+import { Button, Input } from "../styled/styled";
 
 const Person = () => {
 	const { id } = useParams();
@@ -21,35 +22,39 @@ const Person = () => {
 
 	return (
 		<div>
-			<h2>{matchedItem?.person}</h2>
-			<h3>Favorite color is {matchedItem?.color}</h3>
+			<h1>{matchedItem?.person}</h1>
+			<h2>Favorite color is {matchedItem?.color}</h2>
 			<div>
-				<button
+				<Button
 					onClick={() =>
 						matchedItem?.person && removePerson(matchedItem?.person)
 					}
 				>
 					Remove Person
-				</button>
+				</Button>
 			</div>
 			<div>
-				<p>Update Favorite Color</p>
-				<input
+				<p>Update Favorite Color:</p>
+				<Input
 					value={favoriteColor}
 					onChange={(input) => setFavoriteColor(input.target.value)}
 				/>
-				<button
-					onClick={() =>
-						favoriteColor &&
-						dispatch(
-							update({ person: matchedItem?.person, color: favoriteColor })
-						)
-					}
-				>
-					Update
-				</button>
+				<div>
+					<Button
+						onClick={() =>
+							favoriteColor &&
+							dispatch(
+								update({ person: matchedItem?.person, color: favoriteColor })
+							)
+						}
+					>
+						Update
+					</Button>
+				</div>
 			</div>
-			<Link to="/">Back</Link>
+			<Button>
+				<Link to="/">Back</Link>
+			</Button>
 		</div>
 	);
 };

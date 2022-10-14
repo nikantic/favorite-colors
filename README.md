@@ -37,3 +37,5 @@ useEffect(() => {
 
 serve ./src/data/data.json -p 8080 -C
 
+Redux
+
