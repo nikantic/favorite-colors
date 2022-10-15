@@ -1,6 +1,6 @@
 # Favorite Colors
 
-Tech Interview Exercise Project includes following features:
+Tech Exercise Project - *Favorite Colors* including following features:
 
 - Local server - create local server and data object with list of items
 - Hooks - create custom *useFetch* hook
@@ -18,7 +18,7 @@ Create React App with TypeScript template:
 npx create-react-app favorite-colors --template typescript
 ```
 
-Fetching (remember - *await* must be inside *async* function)
+**Fetching** (*await* must be inside *async* function)
 
 ```tsx
 const fetchUrl = async (url: string) => {
@@ -37,15 +37,15 @@ useEffect(() => {
 }, []);
 ```
 
-To host local server and json file on it you can use *Serve* library (pass -C for CORS)
+To host local server and *json* file on it you can use [Serve](https://www.npmjs.com/package/serve) library (pass -C for CORS)
 
 ```bash
 serve ./src/data/data.json -p 8080 -C
 ```
 
-React Router - routes can now be nested, hooks are used
+**React Router** - routes can be nested, use hooks to access params/location/navigate
 
-Redux - check *personSlice* to see how slice is made and used to update global state
+**Redux** - check *personSlice* to see how slice is made and used to update global state
 
-Unit test with JEST - simple test to check if Header is rendered (NOTE: have to wrap test with *BrowserRouter* and *Provider*)
+Unit test with **JEST** - simple test to check if Header is rendered (NOTE: have to wrap test with *BrowserRouter* and *Provider*)
 
